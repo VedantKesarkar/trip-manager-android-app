@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/packingFragment">
+
+    <fragment
+        android:id="@+id/packingFragment"
+        android:name="com.project.tripmanager.tripMain.Packing.presentation.PackingFragment"
+        android:label="fragment_packing"
+        tools:layout="@layout/fragment_packing" >
+        <action
+            android:id="@+id/action_packingFragment_to_categoriesFragment2"
+            app:destination="@id/categoriesFragment2"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
+        <action
+            android:id="@+id/action_packingFragment_to_tagsFragment"
+            app:destination="@id/tagsFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/expenseFragment"
+        android:name="com.project.tripmanager.tripMain.Expenses.presentation.ExpenseFragment"
+        android:label="fragment_expense"
+        tools:layout="@layout/fragment_expense"
+        >
+        <action
+            android:id="@+id/action_expenseFragment_to_addExpensesFragment"
+            app:destination="@id/addExpensesFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/ReportFragment"
+        android:name="com.project.tripmanager.tripMain.ExpenseReports.presentation.ReportFragment"
+        android:label="fragment_split_bill"
+        tools:layout="@layout/fragment_report"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:popEnterAnim="@anim/fade_in"
+        app:popExitAnim="@anim/fade_out">
+        <action
+            android:id="@+id/action_ReportFragment_to_myReportFragment"
+            app:destination="@id/myReportFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.project.tripmanager.tripMain.Info.InfoFragment"
+        tools:layout="@layout/fragment_info"
+        android:label="InfoFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:popEnterAnim="@anim/fade_in"
+        app:popExitAnim="@anim/fade_out"/>
+
+    <fragment
+        android:id="@+id/categoriesFragment2"
+        android:name="com.project.tripmanager.tripMain.Packing.presentation.CategoriesFragment"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:popEnterAnim="@anim/fade_in"
+        app:popExitAnim="@anim/fade_out"
+        >
+        <action
+            android:id="@+id/action_categoriesFragment2_to_packingFragment"
+            app:destination="@id/packingFragment" />
+        <action
+            android:id="@+id/action_categoriesFragment2_to_tagsFragment"
+            app:destination="@id/tagsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/tagsFragment"
+        android:name="com.project.tripmanager.tripMain.Packing.presentation.TagsFragment"
+        android:label="fragment_tags"
+        tools:layout="@layout/fragment_tags"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:popEnterAnim="@anim/fade_in"
+        app:popExitAnim="@anim/fade_out">
+        <action
+            android:id="@+id/action_tagsFragment_to_packingListFragment"
+            app:destination="@id/packingListFragment" />
+        <action
+            android:id="@+id/action_tagsFragment_to_packingFragment"
+            app:destination="@id/packingFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
+        <action
+            android:id="@+id/action_tagsFragment_to_globalListFragment"
+            app:destination="@id/globalListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/packingListFragment"
+        android:name="com.project.tripmanager.tripMain.Packing.presentation.PackingListFragment"
+        android:label="fragment_packing_list"
+        tools:layout="@layout/fragment_packing_list" />
+    <fragment
+        android:id="@+id/globalListFragment"
+        android:name="com.project.tripmanager.tripMain.Packing.presentation.GlobalListFragment"
+        android:label="fragment_global_list"
+        tools:layout="@layout/fragment_global_list" />
+
+    <fragment
+        android:id="@+id/addExpensesFragment"
+        android:name="com.project.tripmanager.tripMain.Expenses.presentation.AddExpensesFragment"
+        android:label="fragment_add_expenses"
+        tools:layout="@layout/fragment_add_expenses"
+       />
+    <fragment
+        android:id="@+id/myReportFragment"
+        android:name="com.project.tripmanager.tripMain.ExpenseReports.presentation.MyReportFragment"
+        android:label="fragment_my_report"
+        tools:layout="@layout/fragment_my_report" />
+
+</navigation>

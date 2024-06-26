@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/catListItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/light_pink"
+
+        app:cardCornerRadius="20dp"
+        android:elevation="10dp">
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/dark_brown"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="Sample Title"/>
+        <TextView
+            android:id="@+id/txt_creator"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="end"
+            android:padding="5dp"
+            android:textStyle="italic"
+            android:text="By: Jayaram Iyer"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:id="@+id/txt_allCat"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:padding="10dp"
+            android:text="Cat1 > Cat2 > Cat3 >"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+
+        <ImageView
+            android:id="@+id/img_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_more_vert_24"
+            android:layout_gravity="end|bottom"
+            android:padding="10dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="More" />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>
